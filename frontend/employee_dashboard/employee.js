@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   renderAttendanceTable();
 });
 
-/* Sidebar toggle */
+
 function toggleSidebar() {
   document.getElementById("sidebar").classList.toggle("collapsed");
 }
 
-/* Section switch */
 function showSection(section, element) {
   document.querySelectorAll(".section").forEach(sec => sec.classList.add("hidden"));
 
@@ -22,8 +21,7 @@ function showSection(section, element) {
   element.classList.add("active");
 }
 
-/* ================= ATTENDANCE LOGIC ================= */
-
+/*Iske niche mera attendence ka logic hai and ye sabse main hai */
 const storageKey = "attendanceRecords";
 let records = JSON.parse(localStorage.getItem(storageKey)) || [];
 
@@ -34,7 +32,7 @@ const tableBody = document.getElementById("attendanceTableBody");
 
 const today = new Date().toLocaleDateString();
 
-/* Load today state */
+
 const todayRecord = records.find(r => r.date === today);
 if (todayRecord) {
   if (todayRecord.checkIn && !todayRecord.checkOut) {
@@ -49,7 +47,7 @@ if (todayRecord) {
   }
 }
 
-/* Check-In */
+/* Check-In ka logic niche hai */
 function checkIn() {
   const time = new Date().toLocaleTimeString();
 
@@ -69,7 +67,7 @@ function checkIn() {
   renderAttendanceTable();
 }
 
-/* Check-Out */
+/* Check-Out ka logic */
 function checkOut() {
   const time = new Date().toLocaleTimeString();
 
@@ -84,7 +82,7 @@ function checkOut() {
   renderAttendanceTable();
 }
 
-/* Render History */
+/* Render History ka logic dhyan se dekh  */
 function renderAttendanceTable() {
   tableBody.innerHTML = "";
 
@@ -116,3 +114,4 @@ onAuthStateChanged(auth, async (user) => {
     window.location.href = "../SignIn.html";
   }
 });
+
