@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dayflow HRMS | Employee</title>
+  <link rel="stylesheet" href="./employee.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+    <ul class="menu">
+      <li class="menu-item active" onclick="showSection('dashboard', this)">
+        <span class="icon">🏠</span>
+        <span class="text">Dashboard</span>
+      </li>
+
+      <li class="menu-item" onclick="showSection('attendance', this)">
+        <span class="icon">🕒</span>
+        <span class="text">Attendance</span>
+      </li>
+
+      <li class="menu-item">
+        <span class="icon">📄</span>
+        <span class="text">Leave Requests</span>
+      </li>
+
+      <li class="menu-item logout">
+        <span class="icon">🚪</span>
+        <span class="text">Logout</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ================= DASHBOARD ================= -->
+    <section id="dashboardSection" class="section">
+      <h1>Welcome, Employee 👋</h1>
+
+      <div class="stats">
+        <div class="stat">Attendance <span>Present</span></div>
+        <div class="stat">Leaves Used <span>2</span></div>
+        <div class="stat">Work Time <span>6.1h</span></div>
+      </div>
+
+      <div class="box">
+        <h3>Dashboard Overview</h3>
+        <p>This is a minimal dashboard overview.</p>
+      </div>
+    </section>
+
+    <!-- ================= ATTENDANCE ================= -->
+    <section id="attendanceSection" class="section hidden">
+
+      <div class="attendance-container">
+
+        <h2>Daily Attendance</h2>
+
+        <div class="attendance-actions">
+          <button class="btn-checkin" id="checkInBtn" onclick="checkIn()">Check-In</button>
+          <button class="btn-checkout" id="checkOutBtn" onclick="checkOut()" disabled>Check-Out</button>
+        </div>
+
+        <p id="attendanceStatus" class="attendance-status">
+          Status: Not Checked In
+        </p>
+
+        <div class="attendance-history">
+          <h3>My Attendance History</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Check-In</th>
+                <th>Check-Out</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="attendanceTableBody"></tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+<script type="module" src="../firebase.js"></script>
+<script type="module" src="./employee.js"></script>
+<link rel="stylesheet" href="./employee.css">
+
+<script src="./employee.js"></script>
+</body>
+</html>

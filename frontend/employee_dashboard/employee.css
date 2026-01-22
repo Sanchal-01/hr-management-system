@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #f6f1dc, #f7e7b7);
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  padding: 20px 10px;
+  transition: width 0.4s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.hamburger {
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 10px;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background: #f4ce57;
+}
+
+.menu-item .icon {
+  font-size: 22px;
+}
+
+.menu-item .text {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.sidebar:not(.collapsed) .menu-item .text {
+  opacity: 1;
+}
+
+.menu-item.logout {
+  background: #ffe5e5;
+}
+
+.menu-item.logout .icon {
+  color: #e74c3c;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+/* Sections */
+.section {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat span {
+  display: block;
+  margin-top: 6px;
+  padding: 8px 18px;
+  background: #2d2d2d;
+  color: white;
+  border-radius: 20px;
+}
+
+/* Card */
+.box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 25px;
+}
+
+/* Attendance Page */
+.attendance-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  max-width: 900px;
+}
+
+.attendance-actions {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+
+.btn-checkin {
+  flex: 1;
+  padding: 14px;
+  background: #22c55e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-checkout {
+  flex: 1;
+  padding: 14px;
+  background: #4f46e5;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+.btn-checkout:disabled {
+  opacity: 0.5;
+}
+
+.attendance-status {
+  font-weight: 600;
+  margin-bottom: 25px;
+}
+
+.attendance-history table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-history th,
+.attendance-history td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+}
