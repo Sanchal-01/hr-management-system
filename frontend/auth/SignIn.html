@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dayflow | Sign In</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="auth-wrapper">
+    <div class="auth-card">
+      <h2 class="title">Welcome to Dayflow</h2>
+      <p class="slogan">Every workday, perfectly aligned.</p>
+      <p class="subtitle">Sign in to continue</p>
+
+      <input id="email" type="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+
+      <!-- ✅ FIX -->
+      <button onclick="login()">Login</button>
+
+      <p class="link">
+        New user? <a href="SignUp.html">Create account</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- ✅ ONLY module scripts -->
+  <script type="module" src="firebase.js"></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
