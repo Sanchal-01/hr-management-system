@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dayflow HR Admin Dashboard</title>
+  <link rel="stylesheet" href="./hr.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar collapsed" id="sidebar">
+    <div class="hamburger" onclick="toggleSidebar()">☰</div>
+
+    <ul class="menu">
+      <li class="menu-item active" onclick="showSection('dashboard', this)">
+        <span class="icon">📊</span>
+        <span class="text">Dashboard</span>
+      </li>
+
+      <li class="menu-item" onclick="showSection('employees', this)">
+        <span class="icon">👥</span>
+        <span class="text">Employees</span>
+      </li>
+
+      <li class="menu-item" onclick="showSection('attendance', this)">
+        <span class="icon">🕒</span>
+        <span class="text">Attendance</span>
+      </li>
+
+      <li class="menu-item" onclick="showSection('leaves', this)">
+        <span class="icon">📋</span>
+        <span class="text">Leave Requests</span>
+      </li>
+
+      <li class="menu-item logout">
+        <span class="icon">🚪</span>
+        <span class="text">Logout</span>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <!-- ================= DASHBOARD ================= -->
+    <section id="dashboardSection" class="section">
+
+      <h1>Welcome, HR Admin 👋</h1>
+
+      <div class="stats">
+        <div class="stat">Total Employees <span>48</span></div>
+        <div class="stat">Present Today <span>42</span></div>
+        <div class="stat">Pending Leaves <span>5</span></div>
+        <div class="stat">On Leave <span>6</span></div>
+      </div>
+
+      <div class="grid">
+        <div class="box">
+          <h3>Employee Overview</h3>
+          <p>Harish – UI/UX</p>
+          <p>Ananya – Backend</p>
+          <p>Rahul – HR</p>
+          <p>Neha – QA</p>
+        </div>
+
+        <div class="box">
+          <h3>Attendance Overview</h3>
+          <div class="bars">
+            <span class="active"></span>
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+            <span></span>
+          </div>
+          <p>Weekly Attendance Summary</p>
+        </div>
+
+        <div class="box dark">
+          <h3>Leave Requests</h3>
+          <p>Harish – Sick Leave</p>
+          <button class="approve">Approve</button>
+          <button class="reject">Reject</button>
+          <p>Ananya – Paid Leave</p>
+          <button class="approve">Approve</button>
+          <button class="reject">Reject</button>
+        </div>
+
+        <div class="box">
+          <h3>Attendance Records</h3>
+          <p>View daily & weekly attendance</p>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ================= EMPLOYEES ================= -->
+    <section id="employeesSection" class="section hidden">
+      <div class="box">
+        <h3>Add New Employee</h3>
+        <form id="employeeForm">
+          <input type="text" id="empName" placeholder="Full Name">
+          <input type="email" id="empEmail" placeholder="Email">
+          <input type="text" id="empRole" placeholder="Role">
+          <input type="text" id="empDept" placeholder="Department">
+          <button type="submit">Add Employee</button>
+        </form>
+      </div>
+
+      <div class="box">
+        <h3>Employee List</h3>
+        <table id="employeeTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Role</th>
+              <th>Department</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ================= ATTENDANCE ================= -->
+    <section id="attendanceSection" class="section hidden">
+
+      <div class="box attendance-card">
+
+        <h2>Daily Attendance</h2>
+
+        <label><strong>User Name</strong></label>
+        <input type="text" id="userNameInput" placeholder="Enter employee name">
+
+        <div style="display:flex; gap:15px; margin:18px 0;">
+          <button id="btnCheckIn" class="btn btn-checkin" onclick="handleCheckIn()">Check-In</button>
+          <button id="btnCheckOut" class="btn btn-checkout" onclick="handleCheckOut()" disabled>Check-Out</button>
+        </div>
+
+        <p id="attendanceHint" class="selected-user">
+          Select a user from the table to Check-Out
+        </p>
+
+        <h3>Attendance Records</h3>
+
+        <table id="attendanceTable">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Date</th>
+              <th>Check-In</th>
+              <th>Check-Out</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+
+      </div>
+
+    </section>
+
+    <!-- ================= LEAVES ================= -->
+    <section id="leavesSection" class="section hidden">
+      <div class="box dark">
+        <h3>Leave Approvals</h3>
+        <p>Approve or reject employee leave requests.</p>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="./hr.js"></script>
+</body>
+</html>
+

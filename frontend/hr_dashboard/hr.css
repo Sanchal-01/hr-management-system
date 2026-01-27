@@ -1,0 +1,299 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, #f6f1dc, #f7e7b7);
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #ffffff;
+  padding: 20px 10px;
+  transition: width 0.4s ease;
+  overflow: hidden;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+}
+
+.hamburger {
+  font-size: 22px;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 18px;
+  padding: 10px 6px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.menu-item.active {
+  background: #f4ce57;
+}
+
+.menu-item .icon {
+  font-size: 22px;
+}
+
+.menu-item .text {
+  font-size: 12px;
+  margin-top: 6px;
+  opacity: 0;
+  max-height: 0;
+  transition: all 0.4s ease;
+}
+
+.sidebar:not(.collapsed) .menu-item .text {
+  opacity: 1;
+  max-height: 20px;
+}
+
+.menu-item.logout {
+  background: #ffe5e5;
+}
+
+.menu-item.logout .icon {
+  color: #e74c3c;
+}
+
+/* Main */
+.main {
+  flex: 1;
+  padding: 40px;
+}
+
+h1 {
+  margin-bottom: 25px;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+
+.stat span {
+  display: block;
+  margin-top: 8px;
+  padding: 8px 18px;
+  background: #2d2d2d;
+  color: #fff;
+  border-radius: 20px;
+}
+
+/* Sections */
+.section {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Cards */
+.box {
+  background: #ffffff;
+  padding: 22px;
+  border-radius: 28px;
+}
+
+.dark {
+  background: #2d2d2d;
+  color: white;
+}
+
+/* Bars */
+.bars {
+  display: flex;
+  gap: 8px;
+  margin: 15px 0;
+}
+.bars span {
+  width: 10px;
+  height: 40px;
+  background: #ddd;
+  border-radius: 6px;
+}
+.bars span.active {
+  background: #f4ce57;
+}
+
+/* Buttons */
+button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.approve {
+  background: #2ecc71;
+}
+.reject {
+  background: #e74c3c;
+}
+
+/* Form */
+input {
+  display: block;
+  padding: 8px;
+  width: 220px;
+  margin-bottom: 10px;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+#attendanceTable tr:hover {
+  background: #fef3c7;
+}
+/* ================= ATTENDANCE BEAUTIFICATION ================= */
+
+/* Attendance Card */
+.attendance-card {
+  background: linear-gradient(145deg, #ffffff, #fff9e6);
+  border-radius: 24px;
+  padding: 28px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* Headings */
+.attendance-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #1f2937;
+}
+
+.attendance-card h3 {
+  margin: 25px 0 10px;
+  color: #374151;
+}
+
+/* Input */
+.attendance-card input {
+  width: 260px;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  outline: none;
+}
+
+.attendance-card input:focus {
+  border-color: #f4ce57;
+}
+
+/* Buttons */
+.btn {
+  padding: 12px 26px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.btn-checkin {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+}
+
+.btn-checkout {
+  background: linear-gradient(135deg, #6366f1, #4f46e5);
+  color: white;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+/* Selected user text */
+.selected-user {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #92400e;
+}
+
+/* Table */
+#attendanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 16px;
+  overflow: hidden;
+  background: white;
+  margin-top: 10px;
+}
+
+#attendanceTable thead {
+  background: #f9fafb;
+}
+
+#attendanceTable th {
+  padding: 14px;
+  font-size: 14px;
+  text-align: left;
+  color: #374151;
+}
+
+#attendanceTable td {
+  padding: 14px;
+  font-size: 14px;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Row hover */
+#attendanceTable tbody tr {
+  transition: background 0.2s ease;
+}
+
+#attendanceTable tbody tr:hover {
+  background: #fff7cc;
+}
+
+/* Selected row */
+#attendanceTable tbody tr.selected {
+  background: #fde68a !important;
+}
