@@ -1,6 +1,4 @@
-/*******************************
- * PAGE INIT
- *******************************/
+
 document.addEventListener("DOMContentLoaded", () => {
   showSection("dashboard", document.querySelector(".menu-item"));
   renderEmployeeTable();
@@ -8,9 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   updateUIState();
 });
 
-/*******************************
- * SIDEBAR LOGIC
- *******************************/
+
 function toggleSidebar() {
   document.getElementById("sidebar").classList.toggle("collapsed");
 }
@@ -35,9 +31,7 @@ function showSection(section, element) {
   element.classList.add("active");
 }
 
-/*******************************
- * EMPLOYEE MODULE
- *******************************/
+
 document
   .getElementById("employeeForm")
   .addEventListener("submit", function (e) {
@@ -80,9 +74,7 @@ function renderEmployeeTable() {
   });
 }
 
-/*******************************
- * MULTI-USER ATTENDANCE MODULE
- *******************************/
+
 let selectedUser = null;
 const attendanceKey = "attendanceRecords";
 
@@ -98,7 +90,7 @@ function saveAttendanceData(data) {
   localStorage.setItem(attendanceKey, JSON.stringify(data));
 }
 
-/* CHECK-IN */
+/* CHECK-IN ka logic niche hai */
 function handleCheckIn() {
   const name = document.getElementById("userNameInput").value.trim();
   if (!name) {
@@ -130,7 +122,7 @@ function handleCheckIn() {
   renderAttendanceTable();
 }
 
-/* CHECK-OUT */
+/* CHECK-OUT ka logic ye hai... */
 function handleCheckOut() {
   if (!selectedUser) {
     alert("Select a user from the table");
@@ -155,7 +147,7 @@ function handleCheckOut() {
   renderAttendanceTable();
 }
 
-/* SELECT USER FROM TABLE */
+
 function selectUser(name) {
   selectedUser = name;
 
@@ -166,7 +158,7 @@ function selectUser(name) {
   renderAttendanceTable();
 }
 
-/* UPDATE BUTTON STATES */
+
 function updateUIState() {
   const btnIn = document.getElementById("btnCheckIn");
   const btnOut = document.getElementById("btnCheckOut");
@@ -184,7 +176,7 @@ function updateUIState() {
   btnOut.disabled = !active;
 }
 
-/* RENDER ATTENDANCE TABLE */
+
 function renderAttendanceTable() {
   const tbody = document.querySelector("#attendanceTable tbody");
   if (!tbody) return;
@@ -205,3 +197,4 @@ function renderAttendanceTable() {
     )
     .join("");
 }
+
