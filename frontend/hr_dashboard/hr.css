@@ -14,7 +14,7 @@ body {
   min-height: 100vh;
 }
 
-/* Sidebar */
+
 .sidebar {
   width: 220px;
   background: #ffffff;
@@ -76,7 +76,7 @@ body {
   color: #e74c3c;
 }
 
-/* Main */
+
 .main {
   flex: 1;
   padding: 40px;
@@ -86,7 +86,8 @@ h1 {
   margin-bottom: 25px;
 }
 
-/* Stats */
+
+
 .stats {
   display: flex;
   gap: 25px;
@@ -102,7 +103,7 @@ h1 {
   border-radius: 20px;
 }
 
-/* Sections */
+
 .section {
   display: block;
 }
@@ -111,14 +112,14 @@ h1 {
   display: none;
 }
 
-/* Grid */
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 25px;
 }
 
-/* Cards */
+
 .box {
   background: #ffffff;
   padding: 22px;
@@ -130,7 +131,7 @@ h1 {
   color: white;
 }
 
-/* Bars */
+
 .bars {
   display: flex;
   gap: 8px;
@@ -146,7 +147,7 @@ h1 {
   background: #f4ce57;
 }
 
-/* Buttons */
+
 button {
   padding: 8px 16px;
   border: none;
@@ -162,7 +163,7 @@ button {
   background: #e74c3c;
 }
 
-/* Form */
+
 input {
   display: block;
   padding: 8px;
@@ -170,7 +171,7 @@ input {
   margin-bottom: 10px;
 }
 
-/* Table */
+
 table {
   width: 100%;
   border-collapse: collapse;
@@ -183,9 +184,9 @@ th, td {
 #attendanceTable tr:hover {
   background: #fef3c7;
 }
-/* ================= ATTENDANCE BEAUTIFICATION ================= */
 
-/* Attendance Card */
+
+
 .attendance-card {
   background: linear-gradient(145deg, #ffffff, #fff9e6);
   border-radius: 24px;
@@ -193,7 +194,7 @@ th, td {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* Headings */
+
 .attendance-card h2 {
   font-size: 24px;
   margin-bottom: 10px;
@@ -205,7 +206,7 @@ th, td {
   color: #374151;
 }
 
-/* Input */
+
 .attendance-card input {
   width: 260px;
   padding: 12px 14px;
@@ -219,7 +220,7 @@ th, td {
   border-color: #f4ce57;
 }
 
-/* Buttons */
+
 .btn {
   padding: 12px 26px;
   border-radius: 999px;
@@ -250,14 +251,14 @@ th, td {
   box-shadow: 0 8px 18px rgba(0,0,0,0.15);
 }
 
-/* Selected user text */
+
 .selected-user {
   margin-top: 12px;
   font-weight: 600;
   color: #92400e;
 }
 
-/* Table */
+
 #attendanceTable {
   width: 100%;
   border-collapse: collapse;
@@ -284,7 +285,7 @@ th, td {
   border-top: 1px solid #e5e7eb;
 }
 
-/* Row hover */
+
 #attendanceTable tbody tr {
   transition: background 0.2s ease;
 }
@@ -293,7 +294,8 @@ th, td {
   background: #fff7cc;
 }
 
-/* Selected row */
+
 #attendanceTable tbody tr.selected {
   background: #fde68a !important;
 }
+
