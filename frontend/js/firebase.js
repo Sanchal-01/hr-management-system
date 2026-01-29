@@ -6,8 +6,6 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 
 const firebaseConfig = {
     apiKey: "_FIREBASE_API_KEY_cannot be released publicly",
-    authDomain: "dayflow-hrms-5504e.firebaseapp.com",
-    projectId: "dayflow-hrms-5504e",
     storageBucket: "dayflow-hrms-5504e.firebasestorage.app",
     messagingSenderId: "28759887270",
     appId: "1:28759887270:web:47e3a01a28df2b23371367" };
