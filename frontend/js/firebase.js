@@ -5,7 +5,7 @@ import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/fireb
 
 
 const firebaseConfig = {
-    apiKey: "AIzaSyB3uE6PcB6Gp2Hoh9lYjxlCBB14QR4OVPI",
+    apiKey: "_FIREBASE_API_KEY_cannot be released publicly",
     authDomain: "dayflow-hrms-5504e.firebaseapp.com",
     projectId: "dayflow-hrms-5504e",
     storageBucket: "dayflow-hrms-5504e.firebasestorage.app",
