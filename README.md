@@ -45,12 +45,32 @@ and implemented using web technologies.
 ```bash
 hr-management-system/
 │
-├── index.html
-├── style.css
-├── script.js
-├── backend/
-│ └── (server-side files if applicable)
-└── README.md
+├── README.md                     
+│
+└── frontend/
+    ├── auth/                 
+    │   ├── SignIn.html
+    │   ├── SignUp.html
+    │   └── README.md
+    │
+    ├── employee_dashboard/     
+    │   ├── index.html
+    │   ├── employee.css
+    │   ├── employee.js
+    │   └── README.md
+    │
+    ├── hr_dashboard/             
+    │   ├── index.html
+    │   ├── hr.css
+    │   ├── hr.js
+    │   └── README.md
+    │
+    ├── css/                      
+    │   └── style.css
+    │
+    └── js/                       
+        ├── firebase.js
+        └── script.js
 ```
 
 ---
