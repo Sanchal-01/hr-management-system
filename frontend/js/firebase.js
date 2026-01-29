@@ -1,0 +1,25 @@
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+
+
+const firebaseConfig = {
+    apiKey: "AIzaSyB3uE6PcB6Gp2Hoh9lYjxlCBB14QR4OVPI",
+    authDomain: "dayflow-hrms-5504e.firebaseapp.com",
+    projectId: "dayflow-hrms-5504e",
+    storageBucket: "dayflow-hrms-5504e.firebasestorage.app",
+    messagingSenderId: "28759887270",
+    appId: "1:28759887270:web:47e3a01a28df2b23371367" };
+
+
+const app = initializeApp(firebaseConfig);
+export const auth = getAuth(app);
+export const db = getFirestore(app);
+export {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+  doc,
+  setDoc,
+  getDoc
+};
